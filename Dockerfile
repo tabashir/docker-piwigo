@@ -13,7 +13,7 @@ RUN echo "daemon off;" >> /etc/nginx/nginx.conf && \
 
 # download latest piwigo source code
 # and unzip it to nginx's /var/www
-RUN curl http://piwigo.org/download/dlcounter.php?code=latest -o /tmp/piwigo.zip && \ 
+RUN curl http://piwigo.org/download/dlcounter.php?code=2.8.2 -o /tmp/piwigo.zip && \ 
     unzip /tmp/piwigo.zip -d /tmp && \
     mv /tmp/piwigo /var/www && \
     rm -rf /tmp/piwigo /tmp/piwigo.zip
